@@ -1,0 +1,25 @@
+{
+  "entries" :[
+    {
+      "key": "BLOODSCRIBE",
+      "name": "research.lostmagic.BLOODSCRIBE.title",
+      "icons": ["lostmagic:scribe_blood"],
+      "category": "APOCRYPHA",
+      "location": [-2, 2],
+      "parents": ["THEORYRESEARCH"],
+      "stages": [
+        {
+          "text": "research.lostmagic.BLOODSCRIBE.text.stage.1",
+          "required_craft":["bloodmagic:sacrificial_dagger"],
+          "required_item":["bloodmagic:monster_soul"],
+          "required_knowledge":["OBSERVATION;BASICS;2"]
+        },
+        {
+          "text": "research.lostmagic.BLOODSCRIBE.text.stage.2",
+          "recipes": ["lostmagic:BloodScribe"],
+          "warp": 1
+        }
+      ]
+    }
+  ]
+}

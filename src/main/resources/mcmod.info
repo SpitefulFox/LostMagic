@@ -1,0 +1,16 @@
+[
+{
+  "modid": "lostmagic",
+  "name": "Lost Magic",
+  "description": "An add-on that adds random things to Thaumcraft.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SpitefulFox"],
+  "credits": "Azanor, joshiejack, Killajoke, LycaonX, Nieue, Succubism, Vazkii, Dylan4ever, Nekosune, Kihira, BluSunrize",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": ["thaumcraft"]
+}
+]

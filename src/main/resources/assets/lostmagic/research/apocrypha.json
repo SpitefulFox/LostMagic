@@ -1,0 +1,37 @@
+{
+    "entries" :[
+      {
+        "key": "LOSTMAGIC",
+        "name": "research.lostmagic.LOSTMAGIC.title",
+        "icons": ["lostmagic:textures/misc/forbidden.png"],
+        "category": "APOCRYPHA",
+        "location": [0, 0],
+        "meta": ["ROUND", "AUTOUNLOCK"],
+        "stages": [
+          {
+            "text": "research.lostmagic.LOSTMAGIC.text.stage.1"
+          }
+        ]
+      },
+      { "key": "PURESHOVEL",
+        "name": "research.lostmagic.PURESHOVEL.title",
+        "icons": ["lostmagic:purifying_shovel"],
+        "category": "APOCRYPHA",
+        "location": [2, 2],
+        "parents": ["LOSTMAGIC", "f_toomuchflux", "ELEMENTALTOOLS"],
+        "stages": [
+          {
+            "text": "research.lostmagic.PURESHOVEL.text.stage.1",
+            "required_knowledge":["THEORY;INFUSION;1"],
+            "required_craft":["thaumcraft:thaumium_shovel"],
+            "required_item":["thaumcraft:log_silverwood"]
+
+          },
+          {
+            "text": "research.lostmagic.PURESHOVEL.text.stage.2",
+            "recipes": ["lostmagic:PureShovel"]
+          }
+        ]
+      }
+    ]
+}
