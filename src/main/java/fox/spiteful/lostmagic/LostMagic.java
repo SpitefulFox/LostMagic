@@ -5,6 +5,7 @@ import fox.spiteful.lostmagic.items.LostItems;
 import fox.spiteful.lostmagic.research.LostResearch;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -45,6 +46,7 @@ public class LostMagic
         Compat.check();
         Compat.preCompatify();
         proxy.doTheRenderThing();
+        MinecraftForge.EVENT_BUS.register(new LostEvents());
     }
 
     @EventHandler
@@ -62,8 +64,8 @@ public class LostMagic
     }
 
     public static ItemStack getCrystal(Aspect asp, int quantity){
-        ItemStack is = new ItemStack(ItemsTC.crystalEssence, quantity);
-        ((ItemCrystalEssence) ItemsTC.crystalEssence).setAspects(is, new AspectList().add(asp, 1));
-        return is;
+        ItemStack crystal = new ItemStack(ItemsTC.crystalEssence, quantity);
+        ((ItemCrystalEssence) ItemsTC.crystalEssence).setAspects(crystal, new AspectList().add(asp, 1));
+        return crystal;
     }
 }

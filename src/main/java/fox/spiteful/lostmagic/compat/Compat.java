@@ -2,23 +2,11 @@ package fox.spiteful.lostmagic.compat;
 
 import fox.spiteful.lostmagic.Config;
 import fox.spiteful.lostmagic.Lumberjack;
-import fox.spiteful.lostmagic.items.ItemScribeBlood;
-import fox.spiteful.lostmagic.items.LostItems;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fluids.FluidUtil;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.Level;
-import thaumcraft.api.ThaumcraftApi;
-import thaumcraft.api.aspects.Aspect;
-import thaumcraft.api.aspects.AspectList;
-import thaumcraft.api.crafting.ShapelessArcaneRecipe;
 
 public class Compat {
 
@@ -31,8 +19,7 @@ public class Compat {
     public static void preCompatify(){
         if(bloodMagic){
             try {
-                LostItems.scribeBlood = new ItemScribeBlood();
-                ForgeRegistries.ITEMS.register(LostItems.scribeBlood);
+                BloodMagic.preRitual();
             }
             catch(Throwable e){
                 bloodMagic = false;
@@ -44,15 +31,7 @@ public class Compat {
     public static void compatify(){
         if(bloodMagic){
             try {
-                ThaumcraftApi.registerResearchLocation(new ResourceLocation("lostmagic", "research/bloodmagic"));
-                ItemStack weakOrb = new ItemStack(getItem("bloodmagic", "blood_orb"));
-                NBTTagCompound tag = new NBTTagCompound();
-                tag.setString("orb", "bloodmagic:weak");
-                weakOrb.setTagCompound(tag);
-
-                ItemStack bucketBlood = FluidUtil.getFilledBucket(FluidRegistry.getFluidStack("lifeessence", 1000));
-
-                ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("lostmagic:BloodScribe"), new ShapelessArcaneRecipe(new ResourceLocation(""), "BLOODSCRIBE", 50, (new AspectList()).add(Aspect.WATER, 1).add(Aspect.EARTH, 1), new ItemStack(LostItems.scribeBlood), new Object[]{ new ItemStack(Items.FEATHER), bucketBlood, weakOrb, new ItemStack(Items.GLASS_BOTTLE) }));
+                BloodMagic.ritual();
             }
             catch(Throwable e){
                 bloodMagic = false;

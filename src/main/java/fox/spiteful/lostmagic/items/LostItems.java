@@ -15,6 +15,8 @@ public class LostItems {
     public static void findItems(){
         shovelPurifier = new ItemShovelPurifier();
         ForgeRegistries.ITEMS.register(shovelPurifier);
+        ringNutrition = new ItemRingNutrition();
+        ForgeRegistries.ITEMS.register(ringNutrition);
     }
 
 }

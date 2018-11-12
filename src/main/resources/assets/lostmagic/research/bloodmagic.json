@@ -6,13 +6,13 @@
       "icons": ["lostmagic:scribe_blood"],
       "category": "APOCRYPHA",
       "location": [-2, 2],
-      "parents": ["THEORYRESEARCH"],
+      "parents": ["LOSTMAGIC", "THEORYRESEARCH"],
       "stages": [
         {
           "text": "research.lostmagic.BLOODSCRIBE.text.stage.1",
           "required_craft":["bloodmagic:sacrificial_dagger"],
           "required_item":["bloodmagic:monster_soul"],
-          "required_knowledge":["OBSERVATION;BASICS;2"]
+          "required_knowledge":["OBSERVATION;BASICS;1"]
         },
         {
           "text": "research.lostmagic.BLOODSCRIBE.text.stage.2",

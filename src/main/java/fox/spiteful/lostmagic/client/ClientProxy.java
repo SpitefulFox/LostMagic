@@ -10,6 +10,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void doTheRenderThing(){
         ModelLoader.setCustomModelResourceLocation(LostItems.shovelPurifier, 0, new ModelResourceLocation(LostItems.shovelPurifier.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(LostItems.ringNutrition, 0, new ModelResourceLocation(LostItems.ringNutrition.getRegistryName(), "inventory"));
         if(LostItems.scribeBlood != null)
             ModelLoader.setCustomModelResourceLocation(LostItems.scribeBlood, 0, new ModelResourceLocation(LostItems.scribeBlood.getRegistryName(), "inventory"));
     }
