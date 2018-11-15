@@ -60,7 +60,7 @@ public class LostMagic
     @EventHandler
     public void will(FMLPostInitializationEvent event)
     {
-
+        LostResearch.findCategories();
     }
 
     public static ItemStack getCrystal(Aspect asp, int quantity){

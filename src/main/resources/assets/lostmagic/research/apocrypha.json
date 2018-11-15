@@ -18,7 +18,7 @@
         "icons": ["lostmagic:purifying_shovel"],
         "category": "APOCRYPHA",
         "location": [2, 2],
-        "parents": ["LOSTMAGIC", "f_toomuchflux", "ELEMENTALTOOLS"],
+        "parents": ["LOSTMAGIC", "f_toomuchflux", "ELEMENTALTOOLS", "!vitium"],
         "stages": [
           {
             "text": "research.lostmagic.PURESHOVEL.text.stage.1",

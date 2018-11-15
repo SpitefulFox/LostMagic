@@ -9,6 +9,8 @@ import org.apache.logging.log4j.Level;
 
 public class Config {
 
+    public static boolean ringNutrition = true;
+
     public static boolean bloodMagic = true;
 
     public static void configurate(File targ)
@@ -18,6 +20,8 @@ public class Config {
         try
         {
             conf.load();
+
+            ringNutrition = conf.get("General", "Ring of Nutrition", ringNutrition, "Disable to remove the Ring of Nutrition").getBoolean(true);
 
             bloodMagic = conf.get("Compatibility", "Blood Magic", bloodMagic, "Disable to disable Blood Magic compatibility").getBoolean(true);
 
