@@ -17,6 +17,8 @@ public class LostEvents {
 
     @SubscribeEvent
     public void onEat(LivingEntityUseItemEvent.Finish event){
+        if(!Config.ringNutrition)
+            return;
         if(event.getEntityLiving() instanceof EntityPlayer){
             EntityPlayer player = (EntityPlayer)event.getEntityLiving();
             if(event.getItem().getItem() instanceof ItemFood) {

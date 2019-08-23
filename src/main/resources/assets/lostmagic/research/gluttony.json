@@ -1,0 +1,24 @@
+{
+  "entries" :[
+    { "key": "RINGNUTRITION",
+      "name": "research.lostmagic.RINGNUTRITION.title",
+      "icons": ["lostmagic:ring_nutrition"],
+      "category": "APOCRYPHA",
+      "location": [2, -2],
+      "parents": ["LOSTMAGIC", "INFUSION"],
+      "reward_item": [ "minecraft:cookie" ],
+      "stages": [
+        {
+          "text": "research.lostmagic.RINGNUTRITION.text.stage.1",
+          "required_knowledge":["THEORY;INFUSION;1"],
+          "required_research":["f_badfood","f_goodfood"]
+
+        },
+        {
+          "text": "research.lostmagic.RINGNUTRITION.text.stage.2",
+          "recipes": ["lostmagic:RingNutrition"]
+        }
+      ]
+    }
+  ]
+}
