@@ -40,7 +40,7 @@ public class LostEvents {
                 }
 
                 int slot = BaublesApi.isBaubleEquipped(player, LostItems.ringNutrition);
-                if (slot == 1 || slot == 2) {
+                if (slot >= 0) {
                     player.getFoodStats().addStats(2, 1.0F);
                 }
             }
