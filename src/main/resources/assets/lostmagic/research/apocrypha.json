@@ -6,7 +6,8 @@
         "icons": ["lostmagic:textures/misc/forbidden.png"],
         "category": "APOCRYPHA",
         "location": [0, 0],
-        "meta": ["ROUND", "AUTOUNLOCK"],
+        "meta": ["ROUND"],
+        "parents": [ "!gotthaumonomicon" ],
         "stages": [
           {
             "text": "research.lostmagic.LOSTMAGIC.text.stage.1"
